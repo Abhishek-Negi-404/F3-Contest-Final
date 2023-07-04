@@ -10,7 +10,6 @@ function getIpAddress() {
     });
 }
 
-
 function getUserInfo() {
   // Retrieve user's IP address using an API
   fetch("https://api.ipify.org/?format=json")
@@ -67,7 +66,7 @@ function showLocationOnMap(lat, lon, data) {
     </ul>
     <ul>
       <li>Organisation: ${data.org}</li>
-      <li>Hostname: ${data.timezone}</li>
+      <li>Hostname: ${location.hostname}</li>
     </ul>
   `;
 
@@ -161,3 +160,4 @@ function filterPostOffices() {
     }
   }
 }
+window.addEventListener("DOMContentLoaded", getIpAddress);
